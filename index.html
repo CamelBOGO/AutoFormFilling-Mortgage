@@ -7,8 +7,8 @@
         <title>Auto Form Filling</title>
 
         <!-- BeerCSS -->
-        <link href="https://cdn.jsdelivr.net/npm/beercss@3.8.0/dist/cdn/beer.min.css" rel="stylesheet" />
-        <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.8.0/dist/cdn/beer.min.js"></script>
+        <link href="https://cdn.jsdelivr.net/npm/beercss@3.9.7/dist/cdn/beer.min.css" rel="stylesheet" />
+        <script type="module" src="https://cdn.jsdelivr.net/npm/beercss@3.9.7/dist/cdn/beer.min.js"></script>
         <script
             type="module"
             src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.1.2/dist/cdn/material-dynamic-colors.min.js"></script>
@@ -46,7 +46,104 @@
 
         <!-- The Main Content -->
         <main style="max-width: 992px; margin: 0 auto 2rem; padding: 1rem 2rem">
-            <h1>Auto Form Filling</h1>
+            <h1>按揭轉介表</h1>
+
+            <fieldset>
+                <legend>請填寫以下資料：</legend>
+                <h5>借款人1</h5>
+                <div class="field border label">
+                    <input />
+                    <label>*借款人1 (英文全名)</label>
+                </div>
+                <div class="row">
+                    <div class="max">
+                        <div class="field border label max">
+                            <input />
+                            <label>*借款人1 HKID</label>
+                        </div>
+                    </div>
+                    <div class="max">
+                        <div class="field border label max">
+                            <input />
+                            <label>*借款人1 聯絡電話</label>
+                        </div>
+                    </div>
+                </div>
+
+                <h5>借款人2</h5>
+                <div class="field border label">
+                    <input />
+                    <label>借款人2 (英文全名)</label>
+                </div>
+                <div class="row">
+                    <div class="max">
+                        <div class="field border label max">
+                            <input />
+                            <label>借款人2 HKID</label>
+                        </div>
+                    </div>
+                    <div class="max">
+                        <div class="field border label max">
+                            <input />
+                            <label>借款人2 聯絡電話</label>
+                        </div>
+                    </div>
+                </div>
+
+                <h5>按揭物業地址</h5>
+                <div class="row" style="margin-bottom: 2rem">
+                    <div class="max">
+                        <div class="field border label max">
+                            <input />
+                            <label>*室</label>
+                        </div>
+                    </div>
+                    <div class="max">
+                        <div class="field border label max">
+                            <input />
+                            <label>*樓</label>
+                        </div>
+                    </div>
+                    <div class="max">
+                        <div class="field border label max">
+                            <input />
+                            <label>座</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="field border label">
+                    <input />
+                    <label>*屋苑及大廈名稱</label>
+                </div>
+                <div class="field border label">
+                    <input />
+                    <label>*地區</label>
+                </div>
+
+                <h5>按揭資料</h5>
+                <div class="field label suffix border">
+                    <select>
+                        <option>新買 (New Mortgage)</option>
+                        <option>轉按 (Refinance)</option>
+                        <option>現契套現 (Cash-Out Refinancing)</option>
+                    </select>
+                    <label>*按揭類別</label>
+                    <i>arrow_drop_down</i>
+                </div>
+                <div class="field border label">
+                    <input />
+                    <label>*預期貸款額</label>
+                </div>
+
+                <h5>客戶聲明 (Customer Declaration)</h5>
+                <label class="checkbox">
+                    <input type="checkbox" />
+                    <span>本人同意以下條款及細則 (註: 客戶的個人資料不會轉移予其他公司作直接促銷用途)</span>
+                </label>
+                <p>1. 本人明白及同意BraBraBra。</p>
+            </fieldset>
+
+            <button class="primary" style="margin-top: 2rem">預覽表格</button>
         </main>
 
         <!-- Scripts -->
