@@ -13,6 +13,12 @@ async function flattenForm() {
     form.flatten();
 
     const pdfBytes = await pdfDoc.save();
+
+    const a = Object.assign(document.createElement("a"), {
+        href: URL.createObjectURL(new Blob([pdfBytes], { type: "application/pdf" })),
+        download: "flattened_form.pdf"
+    });
+    a.click();
 }
 
 flattenForm().then(() => {
