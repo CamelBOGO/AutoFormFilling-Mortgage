@@ -125,16 +125,16 @@
 
                 <h5>按揭資料</h5>
                 <div class="field label suffix border">
-                    <select>
-                        <option>新買 (New Mortgage)</option>
-                        <option>轉按 (Refinance)</option>
-                        <option>現契套現 (Cash-Out Refinancing)</option>
+                    <select id="mortgage_type">
+                        <option value="new_mortgage">新買 (New Mortgage)</option>
+                        <option value="refinance">轉按 (Refinance)</option>
+                        <option value="cash_out_refinancing">現契套現 (Cash-Out Refinancing)</option>
                     </select>
                     <label>*按揭類別</label>
                     <i>arrow_drop_down</i>
                 </div>
                 <div class="field border label">
-                    <input />
+                    <input id="loan_amount" />
                     <label>*預期貸款額</label>
                 </div>
 

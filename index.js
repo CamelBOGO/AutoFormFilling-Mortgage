@@ -21,6 +21,18 @@ async function flattenForm() {
     form.getTextField("fill_building").setText(document.getElementById("building").value);
     form.getTextField("fill_district").setText(document.getElementById("district").value);
 
+    // Get the selected mortgage type value.
+    const mortgageType = document.getElementById("mortgage_type").value;
+    // Set the corresponding checkbox based on the selected value.
+    if (mortgageType === "new_mortgage") {
+        form.getCheckBox("toggle_new_purchase").check();
+    } else if (mortgageType === "refinance" || mortgageType === "cash_out_refinancing") {
+        form.getCheckBox("toggle_others").check();
+    }
+
+    form.getTextField("fill_loan_amount").setText(document.getElementById("loan_amount").value);
+
+
     // Flatten and save the form to a new PDF file.
     form.flatten();
     const pdfBytes = await pdfDoc.save();
